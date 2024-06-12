@@ -50,8 +50,8 @@
         justify-content: space-around;
       }
       .innert-content {
-        gap: 30px;
         width: 900px;
+        height: 248px;
         display: flex;
         justify-items: center;
         flex-direction: column;
@@ -65,10 +65,9 @@
         border-radius: 10px;
         line-height: 17.07px;
         background: #ff1f1f;
-        margin-right: 27px;
+        margin-right: 25px;
       }
       .has-ielts {
-        gap: 0.5em;
         display: flex;
         align-items: center;
       }
@@ -79,7 +78,7 @@
         justify-content: space-between;
       }
       .country {
-        width: 220px;
+        width: 210px;
         height: 125px;
         padding: 10px;
         color: black;
@@ -108,6 +107,59 @@
         line-height: 17.07px;
         background: #00d315;
       }
+      .radio input[type="radio"] {
+        appearance: none;
+        -webkit-appearance: none;
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        border: 2px solid #d9d9d9;
+        background-color: #d9d9d9;
+        outline: none;
+        cursor: pointer;
+        position: relative;
+      }
+      .radio input[type="radio"]:checked {
+        border-color: #00d315;
+      }
+      .radio input[type="radio"]:checked::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: #00d315;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .input {
+        border: 2px solid #d9d9d9;
+        border-radius: 10px;
+        font-size: 14px;
+        padding: 21px;
+      }
+      /* .qualification-area{
+        border: 2px solid #d9d9d9;
+        border-radius: 10px;
+      } */
+      /* .qualification-area .input {
+        padding: 21px;
+      } */
+      .info-area {
+        width: 905px;
+        height: 277px;
+      }
+      .fs-14 {
+        font-size: 14px;
+      }
+      .fs-18 {
+        font-size: 18px;
+      }
+      .text-secondary {
+        color: #424242;
+      }
     </style>
   </head>
   <body class="has-background-gray">
@@ -115,18 +167,26 @@
     <div class="step">
       <h1>Step 1</h1>
       <section>
-        <div class="form-container">
-          <div class="content-wrapper">
+        <div
+          class="form-container is-flex is-justify-content-center is-align-items-center"
+        >
+          <div class="">
             <div class="innert-content">
               <div class="heading-area">
-                <h1 class="title">Study abroad with Globals</h1>
-                <p class="subtitle">Share Information for Details</p>
+                <h1 class="has-text-weight-semibold is-size-4 has-text-black">
+                  Study abroad with Globals
+                </h1>
+                <p class="has-text-weight-normal fs-18">
+                  Share Information for Details
+                </p>
               </div>
               <div class="country-area">
-                <h1 class="title is-5">
+                <h1
+                  class="fs-18 has-text-weight-semibold has-text-black mt-5 mb-2"
+                >
                   Select your preferred study destination(s)
                 </h1>
-                <div class="country-selection">
+                <div class="country-selection mb-3">
                   <div
                     class="country"
                     data-country="uk"
@@ -173,8 +233,8 @@
                   </div>
                 </div>
               </div>
-              <button class="button next">Next</button>
             </div>
+            <button class="button next my-5">Next</button>
           </div>
         </div>
       </section>
@@ -184,84 +244,113 @@
       <h1>Step 2</h1>
       <section>
         <div class="form-container">
-            <div class="content-wrapper">
-          <div class="innert-content">
-            <div class="heading-area">
-              <h1 class="title">Study abroad with Globals</h1>
-              <p class="subtitle">Share Information for Details</p>
-            </div>
-            <div class="info-area">
-              <h2 class="title is-5">Primary Information</h2>
-              <div class="columns">
-                <div class="column">
-                  <div class="field">
-                    <label class="label">First Name</label>
-                    <div class="control has-icons-left">
-                      <input
-                        class="input"
-                        type="text"
-                        placeholder="Given Name"
-                      />
-                      <span class="icon has-text-black is-small is-left">
-                        <i class="fas fa-user"></i>
-                      </span>
+          <div class="is-justify-content-center is-flex">
+            <div>
+              <div class="my-4">
+                <h1 class="has-text-weight-semibold is-size-4 has-text-black">
+                  Study abroad with Globals
+                </h1>
+                <p class="has-text-weight-normal fs-18">
+                  Share Information for Details
+                </p>
+              </div>
+              <div class="info-area is-flex is-flex-direction-column">
+                <h2 class="fs-18 has-text-weight-semibold has-text-black">
+                  Primary Information
+                </h2>
+                <div class="input-area my-5">
+                  <div class="columns">
+                    <div class="column">
+                      <div class="field">
+                        <label class="fs-14 has-text-weight-semibold"
+                          >First Name</label
+                        >
+                        <div class="control has-icons-left">
+                          <input
+                            class="input has-text-weight-semibold"
+                            type="text"
+                            placeholder="Given Name"
+                          />
+                          <span class="icon has-text-black is-small is-left">
+                            <i
+                              style="width: 17px; height: 20px"
+                              class="fas fa-user mt-2"
+                            ></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="column">
+                      <div class="field">
+                        <label class="fs-14 has-text-weight-semibold"
+                          >Last Name</label
+                        >
+                        <div class="control has-icons-left">
+                          <input
+                            class="input has-text-weight-semibold"
+                            type="text"
+                            placeholder="Last Name"
+                          />
+                          <span class="icon has-text-black is-small is-left">
+                            <i
+                              style="width: 17px; height: 20px"
+                              class="fas fa-user mt-2"
+                            ></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="columns">
+                    <div class="column pt-0">
+                      <div class="field">
+                        <label class="fs-14 has-text-weight-semibold"
+                          >Email Address</label
+                        >
+                        <div class="control has-icons-left">
+                          <input
+                            class="input has-text-weight-semibold"
+                            type="email"
+                            placeholder="Email Address"
+                          />
+                          <span class="icon has-text-black is-small is-left">
+                            <i
+                              style="width: 17px; height: 20px"
+                              class="fas fa-envelope mt-2"
+                            ></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="column pt-0">
+                      <div class="field">
+                        <label class="fs-14 has-text-weight-semibold"
+                          >Mobile Number</label
+                        >
+                        <div class="control has-icons-left">
+                          <input
+                            class="input has-text-weight-semibold"
+                            type="tel"
+                            placeholder="Enter your contact"
+                          />
+                          <span class="icon has-text-black is-small is-left">
+                            <i
+                              style="width: 17px; height: 20px"
+                              class="fas is-align-items-center mt-2 fa-phone"
+                            ></i>
+                          </span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="column">
-                  <div class="field">
-                    <label class="label">Last Name</label>
-                    <div class="control has-icons-left">
-                      <input
-                        class="input"
-                        type="text"
-                        placeholder="Last Name"
-                      />
-                      <span class="icon has-text-black is-small is-left">
-                        <i class="fas fa-user"></i>
-                      </span>
-                    </div>
-                  </div>
+                <div class="mt-3">
+                  <button class="button back">Back</button>
+                  <button class="button next">Next</button>
                 </div>
               </div>
-              <div class="columns">
-                <div class="column">
-                  <div class="field">
-                    <label class="label">Email Address</label>
-                    <div class="control has-icons-left">
-                      <input
-                        class="input"
-                        type="email"
-                        placeholder="Email Address"
-                      />
-                      <span class="icon has-text-black is-small is-left">
-                        <i class="fas  fa-envelope"></i>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div class="column">
-                  <div class="field">
-                    <label class="label">Mobile Number</label>
-                    <div class="control has-icons-left">
-                      <input
-                        class="input"
-                        type="tel"
-                        placeholder="Enter your contact"
-                      />
-                      <span class="icon has-text-black is-small is-left">
-                        <i class="fas fa-phone"></i>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
-            <div class="buttons-container">
-              <button class="button back">Back</button>
-              <button class="button next">Next</button>
-            </div>
-          </div></div>
+          </div>
         </div>
       </section>
     </div>
@@ -269,57 +358,94 @@
     <div class="step">
       <h1>Step 3</h1>
       <section>
-        <div class="form-container">
-            <div class="content-wrapper">
-                <div class="innert-content">
-                    <div class="heading-area">
-                      <h1 class="title">Study abroad with Globals</h1>
-                      <p class="subtitle">Share Information for Details</p>
-                    </div>
-                    <div>
-                        <h2 class="title is-5">Admission Preference</h2>
-                    <div class="field">
-                    <label class="label">Preferred Course</label>
-                    <div class="control">
-                      <div class="select is-fullwidth">
-                        <select>
-                          <option>Select your preferred course</option>
-                          <!-- Add options here -->
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="field">
-                    <label class="label">Last Academic Qualification</label>
-                    <div class="control">
-                      <div class="select is-fullwidth">
-                        <select>
-                          <option>Select your Last Academic Qualification</option>
-                          <!-- Add options here -->
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                    </div>
-                  <div class="field is-flex">
-                    <label class="label has-ielts">
-                      <i class="fas fa-info-circle"></i> Has IELTS taken?
-                    </label>
-                    <div class="control  mgl-small">
-                      <label class="radio">
-                        <input type="radio" name="ielts" /> Yes
-                      </label>
-                      <label class="radio">
-                        <input type="radio" name="ielts" checked /> No
-                      </label>
-                    </div>
-                  </div>
-                  <div class="buttons-container">
-                    <button class="button back">Back</button>
-                    <button class="button next">Save</button>
-                  </div>
-                </div>
+        <div
+          class="form-container is-justify-content-center is-flex is-align-items-center flex"
+        >
+          <div style="width: 823px; height: 323px">
+            <div class="heading-area">
+              <h1 class="has-text-weight-semibold is-size-4 has-text-black">
+                Study abroad with Globals
+              </h1>
+              <p class="has-text-weight-normal fs-18">
+                Share Information for Details
+              </p>
             </div>
+            <h2 class="fs-18 has-text-weight-semibold has-text-black mt-5 mb-4">
+              Admission Preference
+            </h2>
+            <div class="is-flex qualification-area mb-5">
+              <!-- <div class="field">
+                  <label class="fs-14 has-text-weight-semibold text-secondary"
+                    >Preferred Course</label
+                  >
+                  <div class="control">
+                    <div class="select">
+                      <select>
+                        <option>Select your preferred course</option>
+                      </select>
+                    </div>
+                  </div>
+                </div> -->
+              <!-- <div class="field">
+                  <label class="fs-14 has-text-weight-semibold text-secondary"
+                    >Last Academic Qualification</label
+                  >
+                  <div class="">
+                    <div class="">
+                      <select class="is-medium">
+                        <option class="fs-14 has-text-weight-semibold">Select your Last Academic Qualification</option>
+                      </select>
+                    </div>
+                  </div>
+                </div> -->
+              <div class="column p-0">
+                <label class="fs-14 has-text-weight-semibold text-secondary"
+                  >Preferred Course</label
+                >
+                <input
+                  class="input fs-14 has-text-weight-semibold text-secondary"
+                  type="select"
+                  placeholder="Select your preferred course"
+                />
+              </div>
+              <div class="column p-0 ml-4">
+                <label class="fs-14 has-text-weight-semibold text-secondary"
+                  >Last Academic Qualification</label
+                >
+                <input
+                  class="input fs-14 has-text-weight-semibold text-secondary"
+                  type="select"
+                  placeholder="Select your Last Academic Qualification"
+                />
+              </div>
+            </div>
+            <div
+              class="field is-flex has-text-weight-semibold is-align-items-center"
+            >
+              <label
+                class="is-flex fs-18 has-text-black is-justify-content-center is-align-items-center heading-3"
+              >
+                <img
+                  width="31px"
+                  height="27px"
+                  src="https://s3-alpha-sig.figma.com/img/f1d7/e720/cab8248c915e1aafed0b8b27a5dc2f97?Expires=1719187200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ECkxDed0K3nv7Wy-iPWE5-KN8106dHR5lk7jkebXEyC5AtXbeZ8HFoyG0WdHUO4ElNMtSfFeyplPVnrVDyd-5QJ-8BbzBkmPo1cYCeejEGxVtOG6AaB~K23x3w5SCvxsn-VNNAGw0WivDI9L3NKPPGaR-xPbV44TpJFqwcwCQRvFi0vufaFtX7snQ27Z7y1SHHE-ppN9uFA0Z-Sk1kK~10r0CirCyBmYNRkMu~z~I4-RMCYSlnIKi7aEzByA4qkjOXcXk6SKkJ~9nS2AwFcCoN0Ahf7eGsQW7DWxgem4iJWEA0o9QEFc91SMREM-wAmdWCTFBv2rl10mAmmSi6HQBQ__"
+                />
+                <span class="is-4">Has IELTS taken?</span>
+              </label>
+              <div class="has-text-black fs-14 ml-5">
+                <label class="radio">
+                  <input type="radio" name="ielts" /> Yes
+                </label>
+                <label class="radio">
+                  <input type="radio" name="ielts" checked /> No
+                </label>
+              </div>
+            </div>
+            <div class="mt-5">
+              <button class="button back">Back</button>
+              <button class="button next">Save</button>
+            </div>
+          </div>
         </div>
       </section>
     </div>
