@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study Abroad Form</title>
+    <!-- Bulma CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Montserrat Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+      }
+      section {
+        display: flex;
+        width: 1280px;
+        height: 627px;
+        align-items: center;
+        margin-bottom: 30px;
+        background-size: cover;
+        justify-content: center;
+        background-color: white;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url("https://s3-alpha-sig.figma.com/img/01ee/f637/5d8f4f1d6c93feb30533069acf400273?Expires=1719187200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=F5Gst9vx27reQAIKRwYj~3e27qgTAoABHR8peUtpuJUi-l0o3K0xyHL9pdWEYwcB~2Fvq6uA7REUbwCEcC6HchGn3BtwO5Oz0MyEdAtgrqai9dF1dSlblDxc41HZyazpqUYh0zD16eCbD0U9IP9qke6u8HPEGfR8Z8VbpsOw6vPWo~e4NIOhQQNOk68Yx7wpW7NqsxdUlB3vzolrHXO8UG85RGAU5DdsTd1wL3ULCDeyFHnoMfYwQaKDHJmQa12BwdMaAzHL4Faa4PFcCHlOtyYpoEAsOtZL~9YqNEtX~gjZbMFba2qWg9lFbm3OerciegDSCD~uNPogoVJ5i7Civg__");
+      }
+      .form-container {
+        width: 1036px;
+        height: 511px;
+        padding: 20px;
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .content-wrapper {
+        height: 485px;
+        display: flex;
+        justify-content: space-around;
+      }
+      .innert-content {
+        gap: 30px;
+        width: 900px;
+        display: flex;
+        justify-items: center;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .back {
+        height: 42px;
+        color: white;
+        width: 115.9px;
+        font-size: 14px;
+        border-radius: 10px;
+        line-height: 17.07px;
+        background: #ff1f1f;
+      }
+      .has-ielts {
+        gap: 0.5em;
+        display: flex;
+        align-items: center;
+      }
+      .country-selection {
+        width: 900px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .country {
+        width: 220px;
+        height: 125px;
+        padding: 10px;
+        color: black;
+        cursor: pointer;
+        font-weight: 600;
+        text-align: center;
+        border-radius: 10px;
+        background: white;
+        border: 2px solid #d9d9d9;
+        transition: border-color 0.3s;
+      }
+      .country img {
+        width: 190px;
+        height: 77px;
+      }
+      .country.selected {
+        color: #00d315;
+        border-color: #00d315;
+      }
+      .next {
+        height: 42px;
+        color: white;
+        width: 115.9px;
+        font-size: 14px;
+        border-radius: 10px;
+        line-height: 17.07px;
+        background: #00d315;
+        margin-left: 27px;
+      }
+    </style>
+  </head>
+  <body class="has-background-gray">
+    <!-- Step 1 -->
+    <div class="step">
+      <h1>Step 1</h1>
+      <section>
+        <div class="form-container">
+          <div class="content-wrapper">
+            <div class="innert-content">
+              <div class="heading-area">
+                <h1 class="title">Study abroad with Globals</h1>
+                <p class="subtitle">Share Information for Details</p>
+              </div>
+              <div class="country-area">
+                <h1 class="title is-5">
+                  Select your preferred study destination(s)
+                </h1>
+                <div class="country-selection">
+                  <div
+                    class="country"
+                    data-country="uk"
+                    onclick="selectCountry(this)"
+                  >
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg"
+                      alt="UK Flag"
+                    />
+                    <p>United Kingdom</p>
+                  </div>
+                  <div
+                    class="country"
+                    data-country="us"
+                    onclick="selectCountry(this)"
+                  >
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg"
+                      alt="US Flag"
+                    />
+                    <p>United States</p>
+                  </div>
+                  <div
+                    class="country"
+                    data-country="au"
+                    onclick="selectCountry(this)"
+                  >
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/en/b/b9/Flag_of_Australia.svg"
+                      alt="Australia Flag"
+                    />
+                    <p>Australia</p>
+                  </div>
+                  <div
+                    class="country"
+                    data-country="ca"
+                    onclick="selectCountry(this)"
+                  >
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/en/c/cf/Flag_of_Canada.svg"
+                      alt="Canada Flag"
+                    />
+                    <p>Canada</p>
+                  </div>
+                </div>
+              </div>
+              <button class="button next">Next</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- Step 2 -->
+    <div class="step">
+      <h1>Step 2</h1>
+      <section>
+        <div class="form-container">
+            <div class="content-wrapper">
+          <div class="innert-content">
+            <div class="heading-area">
+              <h1 class="title">Study abroad with Globals</h1>
+              <p class="subtitle">Share Information for Details</p>
+            </div>
+            <div class="info-area">
+              <h2 class="title is-5">Primary Information</h2>
+              <div class="columns">
+                <div class="column">
+                  <div class="field">
+                    <label class="label">First Name</label>
+                    <div class="control has-icons-left">
+                      <input
+                        class="input"
+                        type="text"
+                        placeholder="Given Name"
+                      />
+                      <span class="icon has-text-black is-small is-left">
+                        <i class="fas fa-user"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="field">
+                    <label class="label">Last Name</label>
+                    <div class="control has-icons-left">
+                      <input
+                        class="input"
+                        type="text"
+                        placeholder="Last Name"
+                      />
+                      <span class="icon has-text-black is-small is-left">
+                        <i class="fas fa-user"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="columns">
+                <div class="column">
+                  <div class="field">
+                    <label class="label">Email Address</label>
+                    <div class="control has-icons-left">
+                      <input
+                        class="input"
+                        type="email"
+                        placeholder="Email Address"
+                      />
+                      <span class="icon has-text-black is-small is-left">
+                        <i class="fas  fa-envelope"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="field">
+                    <label class="label">Mobile Number</label>
+                    <div class="control has-icons-left">
+                      <input
+                        class="input"
+                        type="tel"
+                        placeholder="Enter your contact"
+                      />
+                      <span class="icon has-text-black is-small is-left">
+                        <i class="fas fa-phone"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="buttons-container">
+              <button class="button back">Back</button>
+              <button class="button next">Next</button>
+            </div>
+          </div></div>
+        </div>
+      </section>
+    </div>
+    <!-- Step 3 -->
+    <div class="step">
+      <h1>Step 3</h1>
+      <section>
+        <div class="form-container">
+          <h2 class="title is-5">Admission Preference</h2>
+          <div class="field">
+            <label class="label">Preferred Course</label>
+            <div class="control">
+              <div class="select is-fullwidth">
+                <select>
+                  <option>Select your preferred course</option>
+                  <!-- Add options here -->
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Last Academic Qualification</label>
+            <div class="control">
+              <div class="select is-fullwidth">
+                <select>
+                  <option>Select your Last Academic Qualification</option>
+                  <!-- Add options here -->
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label has-ielts">
+              <i class="fas fa-info-circle"></i> Has IELTS taken?
+            </label>
+            <div class="control">
+              <label class="radio">
+                <input type="radio" name="ielts" /> Yes
+              </label>
+              <label class="radio">
+                <input type="radio" name="ielts" checked /> No
+              </label>
+            </div>
+          </div>
+          <div class="buttons-container">
+            <button class="button is-danger">Back</button>
+            <button class="button is-success">Save</button>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- js script  -->
+    <script>
+      function selectCountry(element) {
+        const selected = document.querySelectorAll(".country.selected");
+        selected.forEach((el) => el.classList.remove("selected"));
+        element.classList.add("selected");
+      }
+    </script>
+  </body>
+</html>
