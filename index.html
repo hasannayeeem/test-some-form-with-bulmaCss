@@ -65,6 +65,7 @@
         border-radius: 10px;
         line-height: 17.07px;
         background: #ff1f1f;
+        margin-right: 27px;
       }
       .has-ielts {
         gap: 0.5em;
@@ -106,7 +107,6 @@
         border-radius: 10px;
         line-height: 17.07px;
         background: #00d315;
-        margin-left: 27px;
       }
     </style>
   </head>
@@ -270,46 +270,56 @@
       <h1>Step 3</h1>
       <section>
         <div class="form-container">
-          <h2 class="title is-5">Admission Preference</h2>
-          <div class="field">
-            <label class="label">Preferred Course</label>
-            <div class="control">
-              <div class="select is-fullwidth">
-                <select>
-                  <option>Select your preferred course</option>
-                  <!-- Add options here -->
-                </select>
-              </div>
+            <div class="content-wrapper">
+                <div class="innert-content">
+                    <div class="heading-area">
+                      <h1 class="title">Study abroad with Globals</h1>
+                      <p class="subtitle">Share Information for Details</p>
+                    </div>
+                    <div>
+                        <h2 class="title is-5">Admission Preference</h2>
+                    <div class="field">
+                    <label class="label">Preferred Course</label>
+                    <div class="control">
+                      <div class="select is-fullwidth">
+                        <select>
+                          <option>Select your preferred course</option>
+                          <!-- Add options here -->
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label class="label">Last Academic Qualification</label>
+                    <div class="control">
+                      <div class="select is-fullwidth">
+                        <select>
+                          <option>Select your Last Academic Qualification</option>
+                          <!-- Add options here -->
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                    </div>
+                  <div class="field is-flex">
+                    <label class="label has-ielts">
+                      <i class="fas fa-info-circle"></i> Has IELTS taken?
+                    </label>
+                    <div class="control  mgl-small">
+                      <label class="radio">
+                        <input type="radio" name="ielts" /> Yes
+                      </label>
+                      <label class="radio">
+                        <input type="radio" name="ielts" checked /> No
+                      </label>
+                    </div>
+                  </div>
+                  <div class="buttons-container">
+                    <button class="button back">Back</button>
+                    <button class="button next">Save</button>
+                  </div>
+                </div>
             </div>
-          </div>
-          <div class="field">
-            <label class="label">Last Academic Qualification</label>
-            <div class="control">
-              <div class="select is-fullwidth">
-                <select>
-                  <option>Select your Last Academic Qualification</option>
-                  <!-- Add options here -->
-                </select>
-              </div>
-            </div>
-          </div>
-          <div class="field">
-            <label class="label has-ielts">
-              <i class="fas fa-info-circle"></i> Has IELTS taken?
-            </label>
-            <div class="control">
-              <label class="radio">
-                <input type="radio" name="ielts" /> Yes
-              </label>
-              <label class="radio">
-                <input type="radio" name="ielts" checked /> No
-              </label>
-            </div>
-          </div>
-          <div class="buttons-container">
-            <button class="button is-danger">Back</button>
-            <button class="button is-success">Save</button>
-          </div>
         </div>
       </section>
     </div>
